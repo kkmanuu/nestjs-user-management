@@ -91,21 +91,10 @@ Ensure you have the following installed:
 
 ### 🛠️ Setup <a name="setup"></a>
 
-Clone the repository:
-
-
-git clone https://github.com/YOUR_GITHUB_USERNAME/user-management-webhook.git
-cd user-management-webhook
 
 ### Clone the repository:
 
-bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/user-management-webhook.git
-cd user-management-webhook
-
-### Clone the repository:
-
-* git clone https://github.com/YOUR_GITHUB_USERNAME/user-management-webhook.git  
+* git clone https://github.com/kkmanuu/nestjs-user-management  
 * cd user-management-webhook  
 * Install <a name="install"></a>
 To install all dependencies, run:
@@ -114,10 +103,38 @@ To install all dependencies, run:
 ###  or  
 * yarn install  
 Usage <a name="usage"></a>
-Set up Firestore in Firebase Console.
-Create a .env file and add your credentials:
+
+### 🗄️ Firestore for Data Storage
+
+* This project uses Firebase Firestore, a cloud-based NoSQL database, to store and manage user data efficiently. Firestore provides real-time data syncing, scalability, and security features, making it ideal for user management applications.
+
+## 🔹 Firestore Setup
+To set up Firestore for this project, follow these steps:
+
+* Create a Firebase Project
+
+* Go to Firebase Console
+- Click Add Project and follow the setup instructions
+Enable Firestore
+
+In the Firebase console, navigate to Firestore Database
+Click Create Database and choose Start in production mode
+Add Firestore Credentials
+
+In the Project Settings under the Service Accounts tab, generate a new private key
+Save the JSON file and update your .env file with these values:
+env
 
 <pre> FIREBASE_PROJECT_ID=your_project_id FIREBASE_PRIVATE_KEY=your_private_key FIREBASE_CLIENT_EMAIL=your_client_email WEBHOOK_SECRET_TOKEN=your_secret_token </pre>
+
+The NestJS application connects to Firestore using Firebase Admin SDK
+User data is stored in the users collection with unique IDs
+Set up Firestore in Firebase Console.
+Create a .env file and add your credentials:
+Use Firestore for data storage.
+
+
+
 
 * Start the server:
 
