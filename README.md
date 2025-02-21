@@ -104,11 +104,8 @@ To install all dependencies, run:
 * yarn install  
 Usage <a name="usage"></a>
 
-### 🗄️ Firestore for Data Storage
 
-* This project uses Firebase Firestore, a cloud-based NoSQL database, to store and manage user data efficiently. Firestore provides real-time data syncing, scalability, and security features, making it ideal for user management applications.
-
-## 🔹 Firestore Setup
+### 🔹 Firestore Setup
 To set up Firestore for this project, follow these steps:
 
 * Create a Firebase Project
