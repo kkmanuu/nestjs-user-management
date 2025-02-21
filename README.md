@@ -2,98 +2,200 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<a name="readme-top"></a>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# 🚀 User Management System with Webhook Integration  
 
-## Description
+## 📚 Table of Contents  
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [📖 About the Project](#about-project)
+- [🛠️ Built With](#built-with)
+- [⚙️ Tech Stack](#tech-stack)
+- [⭐ Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [🔧 Prerequisites](#prerequisites)
+  - [🛠️ Setup](#setup)
+  - [📦 Install](#install)
+  - [🚀 Usage](#usage)
+- [📡 API Endpoints](#api-endpoints)
+  - [👤 User Management](#user-management)
+  - [🔗 Webhook Integration](#webhook-integration)
+- [🧪 Testing](#testing)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [⭐ Show Your Support](#support)
+- [🤝 Contributing](#contributing)
+- [🙏 Acknowledgments](#acknowledgments)
+- [📝 License](#license)
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## 📖 About the Project <a name="about-project"></a>
 
-## Compile and run the project
+This is a **User Management System** built with **NestJS and Firestore**, featuring **Webhook Integration** similar to WhatsApp.
 
-```bash
-# development
-$ npm run start
+### 🔹 Objectives:
+✅ **User Management API** (CRUD operations with validation & pagination)  
+✅ **GraphQL & REST support** for user queries  
+✅ **Webhook Integration** (process messages securely)  
+✅ **Secure API** with authentication  
+✅ **Real-time Firestore updates**  
+✅ **Rate-limiting** for webhook requests  
+✅ **Comprehensive testing**  
 
-# watch mode
-$ npm run start:dev
+[Back to Top](#readme-top)
 
-# production mode
-$ npm run start:prod
-```
+---
 
-## Run tests
+## 🛠️ Built With <a name="built-with"></a>
 
-```bash
-# unit tests
-$ npm run test
+### ⚙️ Tech Stack <a name="tech-stack"></a>
 
-# e2e tests
-$ npm run test:e2e
+- **NestJS** (Backend Framework)  
+- **TypeScript** (Strongly Typed JavaScript)  
+- **Firebase Firestore** (NoSQL Database)  
+- **GraphQL & REST APIs**  
+- **Jest** (Testing Framework)  
+- **Rate Limiting** (API Security)  
 
-# test coverage
-$ npm run test:cov
-```
+[Back to Top](#readme-top)
 
-## Deployment
+---
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+## ⭐ Key Features <a name="key-features"></a>
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+✅ **User Management API** (Create, Read, Update, Delete users)  
+✅ **GraphQL API** for user data  
+✅ **Webhook Integration** for message processing  
+✅ **Secure API authentication**  
+✅ **Real-time Firestore updates**  
+✅ **Rate Limiting** (Throttle webhook requests)  
+✅ **Robust Error Handling**  
+✅ **Comprehensive Testing**  
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+[Back to Top](#readme-top)
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+## 💻 Getting Started <a name="getting-started"></a>
 
-Check out a few resources that may come in handy when working with NestJS:
+To get a local copy up and running, follow these steps:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### 🔧 Prerequisites <a name="prerequisites"></a>
 
-## Support
+Ensure you have the following installed:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **Node.js** (v14+ recommended)  
+- **npm** or **yarn**  
+- **Firebase CLI** (for Firestore setup)  
 
-## Stay in touch
+### 🛠️ Setup <a name="setup"></a>
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Clone the repository:
 
-## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+git clone https://github.com/YOUR_GITHUB_USERNAME/user-management-webhook.git
+cd user-management-webhook
+
+### Clone the repository:
+
+bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/user-management-webhook.git
+cd user-management-webhook
+
+### Clone the repository:
+
+* git clone https://github.com/YOUR_GITHUB_USERNAME/user-management-webhook.git  
+* cd user-management-webhook  
+* Install <a name="install"></a>
+To install all dependencies, run:
+
+ 
+###  or  
+* yarn install  
+Usage <a name="usage"></a>
+Set up Firestore in Firebase Console.
+Create a .env file and add your credentials:
+
+<pre> FIREBASE_PROJECT_ID=your_project_id FIREBASE_PRIVATE_KEY=your_private_key FIREBASE_CLIENT_EMAIL=your_client_email WEBHOOK_SECRET_TOKEN=your_secret_token </pre>
+
+* Start the server:
+
+* npm run start  
+# or  
+yarn start  
+The API will be available at http://localhost:3000.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### :🚀🔥rocket: 
+
+API Endpoints <a name="api-endpoints"></a>
+User Management <a name="user-management"></a>
+Method	Endpoint	Description
+
+``POST	/users	Create a user
+GET	/users	Fetch users (paginated)
+GET	/users/{id}	Retrieve a specific user
+PATCH	/users/{id}	Update user details
+Webhook Integration <a name="webhook-integration"></a>
+Method	Endpoint	Description
+POST	/webhook	Process messages``
+
+### 📨 Webhook Payload Example
+json
+Copy
+
+{
+  "message": "Hello",
+  "phone": "+1234567890"
+}
+
+### 🔒 Security
+http
+Copy
+
+Authorization: Bearer <SECRET_TOKEN>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🧪 Testing
+
+Testing <a name="testing"></a>
+Run unit & end-to-end tests:
+
+
+```npm run test  ```
+
+```npm run test:e2e  ```
+### ✅ Test Coverage Includes:
+
+* User creation (ensuring unique emails)
+Webhook security (token validation)
+Pagination in GET /users
+Webhook reply logic
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### :telescope:
+ ### 🔮 Future Features<a name="future-features"></a>
+* OAuth Authentication for secure login
+* Role-based Access Control
+
+Webhook Event Logging
+Multi-Language Support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### 👥 Authors<a name="authors"></a>
+:bust_in_silhouette: *Emmanuel Kipngeno*
+- GitHub: [@githubhandle](https://github.com/kkmanuu)
+- Twitter: [@twitterhandle](https://twitter.com/kkmanuu)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuel-kipngeno/)
+
+
+## :pray: Acknowledgments <a name="acknowledgements"></a>
+I would like to thank  Fuzu for this opportunity.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 📜 License <a name="license"></a>
+This project is [MIT](./LICENSE.md) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
