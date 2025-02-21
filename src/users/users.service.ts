@@ -8,11 +8,11 @@ import { User } from './entities/user.entity';
 export class UsersService {
   private readonly db = admin.firestore();
 
-  // Create a new user
+
   async create(createUserDto: CreateUserDto): Promise<User> {
     const usersRef = this.db.collection('users');
 
-    // Check if email already exists
+    
     const existingUser = await usersRef.where('email', '==', createUserDto.email).get();
     if (!existingUser.empty) {
       throw new BadRequestException('Email already in use');
@@ -22,11 +22,11 @@ export class UsersService {
     const user: User = {
       id: userRef.id,
       ...createUserDto,
-      createdAt: admin.firestore.FieldValue.serverTimestamp() as FirebaseFirestore.Timestamp, // Fix for Firestore timestamp
+      createdAt: admin.firestore.FieldValue.serverTimestamp() as FirebaseFirestore.Timestamp, 
     };
 
     await userRef.set(user);
-    return { ...user }; // Return user with correct types
+    return { ...user }; 
   }
 
   // Fetch all users with pagination
@@ -63,7 +63,6 @@ export class UsersService {
         const existingUser = await transaction.get(userRef);
         if (!existingUser.exists) throw new NotFoundException('User not found');
 
-        // Ensure email is not updated
         if ('email' in updateUserDto) {
           throw new BadRequestException('Email cannot be updated');
         }
@@ -77,8 +76,8 @@ export class UsersService {
       const updatedUser = await userRef.get();
       return updatedUser.data() as User;
     } catch (error) {
-      console.error('🔥 Error updating user:', error); // Log the actual error
-      throw new Error('Internal server error'); // Ensure a clean error response
+      console.error('🔥 Error updating user:', error); 
+      throw new Error('Internal server error'); 
     }
   }
 }
